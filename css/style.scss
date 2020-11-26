@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+body {
+ 
+  transition: background-color .5s;
+  margin:0; 
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 0 0 0 16px;
+  height:100vh;
+  background-image: url("../img/scene.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .container-top {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    .topbox-text {
+      &.item1 {
+        margin: 8% 0 0 0;
+      }
+      &.item2 {
+        margin: 25% 0 0 0;
+      }
+      text-transform: uppercase;
+      h1 {
+     
+        font-size: 54px;
+        line-height: 38px;
+      }
+      h2 {
+        font-size: 35px;
+        line-height: 25px;
+      }
+      h1, h2   {
+        font-weight: 700;
+        margin:0;
+
+      }
+      p {
+        font-weight: 300;
+        margin:0;
+        font-size:13px;
+      }
+    }
+
+  }
+
+}
+
+.center-container {
+  justify-content: center;
+  display: flex;
+  .image-container {
+   
+    width:80%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    h4 {
+      margin:0;
+      padding: 10px 0 0 15px;
+      text-transform: uppercase;
+      font-weight: 300;
+    }
+    p {
+      margin:0;
+      padding: 10px 15px 0 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .image-content {
+      display:flex;
+      &.item1 {
+        
+        width:49%;
+        height:400px;
+        background-image: url("../img/ice.jpg");
+        background-size: cover;
+      }
+      &.item2 {
+        width:24%;
+        height:400px;
+        background-image: url("../img/tree.jpg");
+        background-size: cover;
+      }
+      &.item3 {
+        width:24%;
+        height:400px;
+        background-image: url("../img/wintry.jpg");
+        background-size: cover;
+        position: relative;
+        .image-content-textarea {
+          bottom:0;
+          position: absolute;
+          color:#ededed;
+          height:150px;
+          width:100%;
+          background-color: #00000099;
+        }
+      }
+      &.item4 {
+        margin-top:1.5%;
+        width:100%;
+        height:400px;
+        background-image: url("../img/nature.jpg");
+        background-size: cover;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
